@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(52, 52, 145);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.painel {
+    width: 80%;
+    background: rgb(71, 134, 189);
+    border-radius: 15px;
+    margin: 50px;
+}
+
+.painel h1, #data{
+    font-size: 50px;
+    color: aliceblue;
+    margin: 30px 30px 0 30px;
+}
+
+#data{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.criarNotas {
+    font-size: 80%;
+    color: rgb(4, 94, 155);
+    background: aliceblue;
+    width: 20%;
+    height: 20%;
+    border-radius: 5px;
+    border-width: medium;
+    border-style: solid;
+    border-color: rgb(4, 94, 155);
+    cursor: pointer;
+    margin: 30px;
+}
+
+
+.notas {
+    display: flex;
+    margin: 0 30px 20px 30px;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+
+.notas img {
+    display: block;
+    position: absolute;
+    width: 25px;
+    bottom: 6px;
+    right: 6px;
+    outline: 0;
+    cursor: pointer;
+}
+
+
+.txtNota {
+    position: relative;
+    background: aliceblue;
+    color: cadetblue;
+    font-size: small;
+    margin: 2px;
+    width: 100%;
+    max-width: 200px;
+    min-height: 150px;
+    outline: none;
+    overflow: hidden;
+    padding: 10px;
+}
