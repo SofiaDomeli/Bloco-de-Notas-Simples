@@ -3,7 +3,7 @@ const criarNota = document.querySelector('.criarNotas')
 const notas = document.querySelectorAll('.txtNota')
 
 const hoje = new Date() 
-document.getElementById('data').innerHTML = hoje.toLocaleDateString() + ' - ' + hoje.getHours()+ ':' + hoje.getMinutes().toString().padStart(2,"0")
+document.getElementById('data').innerHTML = "Última atualização: " + hoje.toLocaleDateString() + ' - ' + hoje.getHours()+ ':' + hoje.getMinutes().toString().padStart(2,"0")
 
 criarNota.addEventListener("click", () => {
     let textoNota = document.createElement('p')
