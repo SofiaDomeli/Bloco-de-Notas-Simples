@@ -1,9 +1,18 @@
 const listaNotas = document.querySelector('.notas')
 const criarNota = document.querySelector('.criarNotas')
-const notas = document.querySelectorAll('.txtNota')
+let notas = document.querySelectorAll('.txtNota')
 
 const hoje = new Date() 
-document.getElementById('data').innerHTML = hoje.toLocaleDateString() + ' - ' + hoje.getHours()+ ':' + hoje.getMinutes().toString().padStart(2,"0")
+document.getElementById('data').innerHTML = "Última atualização: " + "<br>" + hoje.toLocaleDateString() + ' - ' + hoje.getHours().toString().padStart(2,"0") + ':' + hoje.getMinutes().toString().padStart(2,"0")
+
+function armazenarNota() {
+    localStorage.setItem("notas", listaNotas.innerHTML)    
+}
+
+function mostrarNotas(){
+    listaNotas.innerHTML = localStorage.getItem("notas")
+}
+mostrarNotas()
 
 criarNota.addEventListener("click", () => {
     let textoNota = document.createElement('p')
@@ -17,5 +26,13 @@ criarNota.addEventListener("click", () => {
 listaNotas.addEventListener("click", function(e){
     if(e.target.tagName === "IMG") {
         e.target.parentElement.remove()
+        armazenarNota()
+    } else if(e.target.tagName === "P") {
+        notas = document.querySelectorAll(".txtNota")
+        notas.forEach(nota => {
+            nota.onkeyup = function(){
+                armazenarNota()
+            }
+        })
     }
 })

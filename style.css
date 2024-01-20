@@ -5,9 +5,11 @@
     box-sizing: border-box;
 }
 
+
 body {
     background: rgb(52, 52, 145);
 }
+
 
 .container {
     display: flex;
@@ -16,41 +18,73 @@ body {
     flex-direction: column;
 }
 
+
 .painel {
     width: 80%;
-    background: rgb(71, 134, 189);
+    background: rgb(43, 30, 131);
     border-radius: 15px;
     margin: 50px;
 }
 
-.painel h1, #data{
-    font-size: 50px;
-    color: aliceblue;
+
+.titulo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
     margin: 30px 30px 0 30px;
+    gap: 5px;
 }
 
+
+.titulo img{
+    width: 50px;
+    height: 50px;
+}
+
+
+.titulo h1, #data{
+    font-size: 50px;
+    color: rgb(17, 14, 65);
+}
+
+
 #data{
+    margin: 30px 30px 0 30px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 15px;
+    font-weight: bold;
 }
+
 
 .header {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
+
 
 .criarNotas {
     font-size: 80%;
-    color: rgb(4, 94, 155);
-    background: aliceblue;
-    width: 20%;
-    height: 20%;
+    color: rgb(17, 14, 65);
+    background: rgb(91, 94, 198);
+    width: 120px;
     border-radius: 5px;
     border-width: medium;
     border-style: solid;
-    border-color: rgb(4, 94, 155);
+    border-color: rgb(17, 14, 65);
     cursor: pointer;
     margin: 30px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+#adicionar {
+    width: 15px;
+    margin: 1px 0 1px 0;
 }
 
 
@@ -75,8 +109,8 @@ body {
 
 .txtNota {
     position: relative;
-    background: aliceblue;
-    color: cadetblue;
+    background: rgb(118, 121, 216);
+    color: rgb(17, 14, 65);;
     font-size: small;
     margin: 2px;
     width: 100%;
